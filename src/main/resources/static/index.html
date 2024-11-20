@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicación Spring Boot</title>
+</head>
+<body>
+    <h1></h1>
+    <img src="distributed_systems.jpg" width="400" height="400" alt="Logo">
+    <h4><a href="./climate/websocket.html">TAREA 2 WEBSOCKET</a></h4>
+    <p>Curso: <strong>Sistemas Distribuidos</strong></p>
+    <p>Integrantes:</p>
+    <ul>
+        <li>Minga Carhuallocyo Elton Josehp</li>
+        <li>Calderon Cueva  Augusto Leonardo</li>
+        <li>Rojas Aquino Jose David</li>
+        <li>Quispe Guzman Fausto Tomiko</li>
+    </ul>
+    
+    <h1>Subir una tarea</h1>
+    <form id="uploadForm" enctype="multipart/form-data" method="post">
+        <label for="title">Titulo de la terea </label>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="description">Descripción de la tarea</label>
+        <input type="text" id="description" name="description" required><br><br>
+        <label for="file">Selecciona un archivo:</label>
+        <input type="file" id="file" name="file" required><br><br>
+
+        <button type="submit">Subir tarea</button>
+    </form>
+
+    <h2>Tareas subidas</h2>
+    <div id="taskList">
+        <!-- lista de tareas con los archivos -->
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

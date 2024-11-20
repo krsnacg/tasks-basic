@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Climate Data</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌎Climate Data Viewer</h1>
+    </header>
+    <main>
+        <section class="climate-info">
+            <div class="info-row">
+                <strong>Mes:</strong> <span id="month" th:text="${month}"></span>
+            </div>
+            <div class="info-row">
+                <strong>Año:</strong> <span id="year" th:text="${year}"></span>
+            </div>
+            <div class="info-row">
+                <strong>Temperatura (°C):</strong> <span id="tmp" th:text="${tmp}"></span>
+            </div>
+            <div class="info-row">
+                <strong>Precipitacion (mm):</strong> <span id="pr" th:text="${pr}"></span>
+            </div>
+        </section>
+
+        <!-- Formulario para subir CSV -->
+        <!-- <section class="upload-section">
+            <h2>📂 Upload Climate Data (CSV)</h2>
+            <form action="/clima/upload-csv" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">Upload CSV</button>
+            </form>
+        </section> -->
+
+        <section class="controls">
+            <button id="refresh-btn">Refresh Data</button>
+        </section>
+        <h5><a href="../index.html">Volver</a></h5>
+    </main>
+    <footer>
+        <p>Powered by <strong>FISI</strong></p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
